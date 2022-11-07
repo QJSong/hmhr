@@ -11,12 +11,10 @@ export function isExternal(path) {
 }
 
 /**
- * 判断传进来的是不是admin 和 editor
+ * 判断传进来手机号
  * @param {string} str
- * @returns {Boolean}
+ * @returns {Boolean} 通过校验给true
  */
-export function validUsername(str) {
-  const valid_map = ['admin', 'editor']
-  // indexOf（值） 找下标
-  return valid_map.indexOf(str.trim()) >= 0
+export function validMobile(str) {
+  return /^1[3-9]\d{9}$/.test(str)
 }
